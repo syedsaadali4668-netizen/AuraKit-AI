@@ -19,7 +19,8 @@ export default function Dashboard({ setIsAuthenticated }) {
   const fetchHistory = async () => {
     const token = localStorage.getItem('token');
     try {
-      const res = await fetch('http://localhost:5000/api/history', {
+      // UPDATED TO LIVE RAILWAY URL
+      const res = await fetch('https://aurakit-ai-production.up.railway.app/api/history', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -42,7 +43,8 @@ export default function Dashboard({ setIsAuthenticated }) {
     const token = localStorage.getItem('token');
     
     try {
-      const res = await fetch('http://localhost:5000/api/agent', {
+      // UPDATED TO LIVE RAILWAY URL
+      const res = await fetch('https://aurakit-ai-production.up.railway.app/api/agent', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

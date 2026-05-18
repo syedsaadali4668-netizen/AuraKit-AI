@@ -16,7 +16,8 @@ export default function Auth({ setIsAuthenticated }) {
     const endpoint = isLogin ? '/api/login' : '/api/register';
     
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      // UPDATED TO LIVE RAILWAY URL
+      const res = await fetch(`https://aurakit-ai-production.up.railway.app${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
